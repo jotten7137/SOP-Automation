@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SOP Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+        <title>SOP Form</title>
+
+        <!--Dependencies-->
+        <!--External Stylesheets--> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel='stylesheet' href="../static/css/SOP_Single_Form_Style.css">
+    
+    </head>
+  
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <!-- <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="SOP_Form.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li> -->
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li> -->
+            <!-- <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+            </ul>
+
+
+             <!-- Important - if you uncomment the search function, you have to update the 'app-SOP-form''s for loops -->
+            <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
+        </nav>
+    </header>
+
+    <body>
+        <div class="container">
+        <!--Form-->
+        <form id="regForm">
+            <h3>SOP Input Form</h3>
+            
+            <!-- One tab for each step in the form -->
+            <!-- First Tab -->
+            <div class='tab'>
+                <!--Title, Doc#, Name-->
+                <div class= "form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputTitle1">Title</label>
+                        <p><input type="text" id="Title" placeholder="Title" oninput="this.className=''" name="title"></p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputDoc1">Doc#</label>
+                        <p><input type="text" id="Doc" placeholder="Doc" oninput="this.className=''" name="doc"></p>
+                    </div>
+                </div>
+                <div class= "form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputfirstname1">First Name</label>
+                        <p><input type="text" id="fname" placeholder="First Name" oninput="this.className=''" name="fname"></p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputDoc1">Last Name</label>
+                        <p><input type="text" id="lname" placeholder="Last Name" oninput="this.className=''" name="lname"></p>
+                    </div>
+                </div>
+            
+
+                <!-- Location -->
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="country">Country</label>
+                        <p><input type="text" id="Country" placeholder="Country" oninput="this.className=''" name="country" ></p>
+                        <!-- <select class="custom-select d-block w-100" oninput="this.className=''" name="country">
+                            <option value="">Choose...</option>
+                            <option>United States</option>
+                        </select> -->
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="state">State</label>
+                        <p><input type="text" id="State" placeholder="State" oninput="this.className=''" name="state" ></p>
+                        <!-- <select class="custom-select d-block w-100" oninput="this.className=''" name="state">
+                            <option value="">Choose...</option>
+                            <option>Ohio</option>
+                        </select> -->
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="city">City</label>
+                        <p><input type="text" id="City" placeholder="City" oninput="this.className=''" name="city" ></p>
+                        <!-- <select class="custom-select d-block w-100" oninput="this.className=''" name="city">
+                            <option value="">Choose...</option>
+                            <option>Avon Lake</option>
+                        </select> -->
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="zip">Zip</label>
+                        <p><input type="text" id="Zip" placeholder="Zip Code" oninput="this.className=''" name="zip" ></p>
+                    </div>
+                </div>
+        
+                
+                <!-- SOP_Data -->
+                <!-- Scope, Purpose, Material, etc... -->
+                <h4 class="mb-3">Process Details</h4>
+                <div class= "form-group row">
+                    <div class="col-md-6">
+                        <div class="row mb-3">
+                            <label for="inputBusiness1" class="col-sm-2 col-form-label">Business Unit</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputBusiness1" placeholder="Business Unit">
+                            </div>  
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputScope1" class="col-sm-2 col-form-label">Scope</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputScope1" placeholder="Scope">
+                            </div>  
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputMaterial1" class="col-sm-2 col-form-label">Material</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputMaterial1" placeholder="Material">
+                            </div>  
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputTooling1" class="col-sm-2 col-form-label">Tooling</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputTooling1" placeholder="Tooling">
+                            </div>  
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEquipment1" class="col-sm-2 col-form-label">Equipment</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputEquipment1" placeholder="Equipment">
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row mb-3">
+                            <label for="inputPurpose1" class="col-sm-2 col-form-label">Purpose</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="inputPurpose1" placeholder="Purpose" rows="13"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Process Step 1-->
+            <div class='tab'>
+                <label for="inputStep1" class="col-auto col-form-label">Process Step 1</label>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputStep1" placeholder="Step" oninput="this.className = ''" name="step1">
+                </div>
+                <br>
+                <p>Below is the sub-steps for the process step, and the safety that is required.</p>   
+            
+                <!-- Table Creation -->
+                <table class="table table-bordered table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Step</th>
+                    <th scope="col">Safety</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep1_1" placeholder="Sub-Step 1" rows="1" oninput="this.className = ''" name="substep1_1"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety1_1" placeholder="Safety 1" rows="1" oninput="this.className = ''" name="safetystep1_1"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep1_2" placeholder="Sub-Step 2" rows="1" oninput="this.className = ''" name="substep1_2"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety1_2" placeholder="Safety 2" rows="1" oninput="this.className = ''" name="safetystep1_2"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep1_3" placeholder="Sub-Step 3" rows="1" oninput="this.className = ''" name="substep1_3"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety1_3" placeholder="Safety 3" rows="1" oninput="this.className = ''" name="safetystep1_3"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep1_4" placeholder="Sub-Step 4" rows="1" oninput="this.className = ''" name="substep1_4"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety1_4" placeholder="Safety 4" rows="1" oninput="this.className = ''" name="safetystep1_4"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep1_5" placeholder="Sub-Step 5" rows="1" oninput="this.className = ''" name="substep1_5"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety1_5" placeholder="Safety 5" rows="1" oninput="this.className = ''" name="safetystep1_5"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep1_6" placeholder="Sub-Step 6" rows="1" oninput="this.className = ''" name="substep1_6"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety1_6" placeholder="Safety 6" rows="1" oninput="this.className = ''" name="safetystep1_6"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep1_7" placeholder="Sub-Step 7" rows="1" oninput="this.className = ''" name="substep1_7"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety1_7" placeholder="Safety 7" rows="1" oninput="this.className = ''" name="substep1_7"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep1_8" placeholder="Sub-Step 8" rows="1" oninput="this.className = ''" name="substep1_8"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety1_8" placeholder="Safety 8" rows="1" oninput="this.className = ''" name="substep1_8"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep1_9" placeholder="Sub-Step 9" rows="1" oninput="this.className = ''" name="substep1_9"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety1_9" placeholder="Safety 9" rows="1" oninput="this.className = ''" name="substep1_9"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep1_10" placeholder="Sub-Step 10" rows="1" oninput="this.className = ''" name="substep1_10"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety1_10" placeholder="Safety 10" rows="1" oninput="this.className = ''" name="substep1_10"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <!-- Process Step 2-->
+            <div class='tab'>
+                <label for="inputStep2" class="col-auto col-form-label">Process Step 2</label>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputStep2" placeholder="Step" oninput="this.className = ''" name="step2">
+                </div>
+                <br>
+                <p>Below is the sub-steps for the process step, and the safety that is required.</p>   
+            
+                <!-- Table Creation -->
+                <table class="table table-bordered table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Step</th>
+                    <th scope="col">Safety</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep2_1" placeholder="Sub-Step 1" rows="1" oninput="this.className = ''" name="substep2_1"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety2_1" placeholder="Safety 1" rows="1" oninput="this.className = ''" name="safetystep2_1"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep2_2" placeholder="Sub-Step 2" rows="1" oninput="this.className = ''" name="substep2_2"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety2_2" placeholder="Safety 2" rows="1" oninput="this.className = ''" name="safetystep2_2"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep2_3" placeholder="Sub-Step 3" rows="1" oninput="this.className = ''" name="substep2_3"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety2_3" placeholder="Safety 3" rows="1" oninput="this.className = ''" name="safetystep2_3"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep2_4" placeholder="Sub-Step 4" rows="1" oninput="this.className = ''" name="substep2_4"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety2_4" placeholder="Safety 4" rows="1" oninput="this.className = ''" name="safetystep2_4"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep2_5" placeholder="Sub-Step 5" rows="1" oninput="this.className = ''" name="substep2_5"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety2_5" placeholder="Safety 5" rows="1" oninput="this.className = ''" name="safetystep2_5"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep2_6" placeholder="Sub-Step 6" rows="1" oninput="this.className = ''" name="substep2_6"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety2_6" placeholder="Safety 6" rows="1" oninput="this.className = ''" name="safetystep2_6"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep2_7" placeholder="Sub-Step 7" rows="1" oninput="this.className = ''" name="substep2_7"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety2_7" placeholder="Safety 7" rows="1" oninput="this.className = ''" name="substep2_7"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep2_8" placeholder="Sub-Step 8" rows="1" oninput="this.className = ''" name="substep2_8"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety2_8" placeholder="Safety 8" rows="1" oninput="this.className = ''" name="substep2_8"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep2_9" placeholder="Sub-Step 9" rows="1" oninput="this.className = ''" name="substep2_9"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety2_9" placeholder="Safety 9" rows="1" oninput="this.className = ''" name="substep2_9"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep2_10" placeholder="Sub-Step 10" rows="1" oninput="this.className = ''" name="substep2_10"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety2_10" placeholder="Safety 10" rows="1" oninput="this.className = ''" name="substep2_10"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <!-- Process Step 3 -->
+            <div class='tab'>
+                <label for="inputStep3" class="col-auto col-form-label">Process Step 3</label>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputStep3" placeholder="Step" oninput="this.className = ''" name="step3">
+                </div>
+                <br>
+                <p>Below is the sub-steps for the process step, and the safety that is required.</p>   
+            
+                <!-- Table Creation -->
+                <table class="table table-bordered table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Step</th>
+                    <th scope="col">Safety</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep3_1" placeholder="Sub-Step 1" rows="1" oninput="this.className = ''" name="substep3_1"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety3_1" placeholder="Safety 1" rows="1" oninput="this.className = ''" name="safetystep3_1"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep3_2" placeholder="Sub-Step 2" rows="1" oninput="this.className = ''" name="substep3_2"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety3_2" placeholder="Safety 2" rows="1" oninput="this.className = ''" name="safetystep3_2"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep3_3" placeholder="Sub-Step 3" rows="1" oninput="this.className = ''" name="substep3_3"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety3_3" placeholder="Safety 3" rows="1" oninput="this.className = ''" name="safetystep3_3"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep3_4" placeholder="Sub-Step 4" rows="1" oninput="this.className = ''" name="substep3_4"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety3_4" placeholder="Safety 4" rows="1" oninput="this.className = ''" name="safetystep3_4"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep3_5" placeholder="Sub-Step 5" rows="1" oninput="this.className = ''" name="substep3_5"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety3_5" placeholder="Safety 5" rows="1" oninput="this.className = ''" name="safetystep3_5"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep3_6" placeholder="Sub-Step 6" rows="1" oninput="this.className = ''" name="substep3_6"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety3_6" placeholder="Safety 6" rows="1" oninput="this.className = ''" name="safetystep3_6"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep3_7" placeholder="Sub-Step 7" rows="1" oninput="this.className = ''" name="substep3_7"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety3_7" placeholder="Safety 7" rows="1" oninput="this.className = ''" name="substep3_7"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep3_8" placeholder="Sub-Step 8" rows="1" oninput="this.className = ''" name="substep3_8"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety3_8" placeholder="Safety 8" rows="1" oninput="this.className = ''" name="substep3_8"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep3_9" placeholder="Sub-Step 9" rows="1" oninput="this.className = ''" name="substep3_9"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety3_9" placeholder="Safety 9" rows="1" oninput="this.className = ''" name="substep3_9"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep3_10" placeholder="Sub-Step 10" rows="1" oninput="this.className = ''" name="substep3_10"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety3_10" placeholder="Safety 10" rows="1" oninput="this.className = ''" name="substep3_10"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <!-- Process Step 4 -->
+            <div class='tab'>
+                <label for="inputStep4" class="col-auto col-form-label">Process Step 4</label>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputStep4" placeholder="Step" oninput="this.className = ''" name="step4">
+                </div>
+                <br>
+                <p>Below is the sub-steps for the process step, and the safety that is required.</p>   
+            
+                <!-- Table Creation -->
+                <table class="table table-bordered table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Step</th>
+                    <th scope="col">Safety</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep4_1" placeholder="Sub-Step 1" rows="1" oninput="this.className = ''" name="substep4_1"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety4_1" placeholder="Safety 1" rows="1" oninput="this.className = ''" name="safetystep4_1"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep4_2" placeholder="Sub-Step 2" rows="1" oninput="this.className = ''" name="substep4_2"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety4_2" placeholder="Safety 2" rows="1" oninput="this.className = ''" name="safetystep4_2"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep4_3" placeholder="Sub-Step 3" rows="1" oninput="this.className = ''" name="substep4_3"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety4_3" placeholder="Safety 3" rows="1" oninput="this.className = ''" name="safetystep4_3"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep4_4" placeholder="Sub-Step 4" rows="1" oninput="this.className = ''" name="substep4_4"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety4_4" placeholder="Safety 4" rows="1" oninput="this.className = ''" name="safetystep4_4"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep4_5" placeholder="Sub-Step 5" rows="1" oninput="this.className = ''" name="substep4_5"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety4_5" placeholder="Safety 5" rows="1" oninput="this.className = ''" name="safetystep4_5"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep4_6" placeholder="Sub-Step 6" rows="1" oninput="this.className = ''" name="substep4_6"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety4_6" placeholder="Safety 6" rows="1" oninput="this.className = ''" name="safetystep4_6"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep4_7" placeholder="Sub-Step 7" rows="1" oninput="this.className = ''" name="substep4_7"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety4_7" placeholder="Safety 7" rows="1" oninput="this.className = ''" name="substep4_7"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep4_8" placeholder="Sub-Step 8" rows="1" oninput="this.className = ''" name="substep4_8"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety4_8" placeholder="Safety 8" rows="1" oninput="this.className = ''" name="substep4_8"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep4_9" placeholder="Sub-Step 9" rows="1" oninput="this.className = ''" name="substep4_9"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety4_9" placeholder="Safety 9" rows="1" oninput="this.className = ''" name="substep4_9"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep4_10" placeholder="Sub-Step 10" rows="1" oninput="this.className = ''" name="substep4_10"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety4_10" placeholder="Safety 10" rows="1" oninput="this.className = ''" name="substep4_10"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+            
+            <!-- Process Step 5 -->
+            <div class='tab'>
+                <label for="inputStep5" class="col-auto col-form-label">Process Step 5</label>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputStep5" placeholder="Step" oninput="this.className = ''" name="step5">
+                </div>
+                <br>
+                <p>Below is the sub-steps for the process step, and the safety that is required.</p>   
+            
+                <!-- Table Creation -->
+                <table class="table table-bordered table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Step</th>
+                    <th scope="col">Safety</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep5_1" placeholder="Sub-Step 1" rows="1" oninput="this.className = ''" name="substep5_1"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety5_1" placeholder="Safety 1" rows="1" oninput="this.className = ''" name="safetystep5_1"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep5_2" placeholder="Sub-Step 2" rows="1" oninput="this.className = ''" name="substep5_2"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety5_2" placeholder="Safety 2" rows="1" oninput="this.className = ''" name="safetystep5_2"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep5_3" placeholder="Sub-Step 3" rows="1" oninput="this.className = ''" name="substep5_3"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety5_3" placeholder="Safety 3" rows="1" oninput="this.className = ''" name="safetystep5_3"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep5_4" placeholder="Sub-Step 4" rows="1" oninput="this.className = ''" name="substep5_4"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety5_4" placeholder="Safety 4" rows="1" oninput="this.className = ''" name="safetystep5_4"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep5_5" placeholder="Sub-Step 5" rows="1" oninput="this.className = ''" name="substep5_5"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety5_5" placeholder="Safety 5" rows="1" oninput="this.className = ''" name="safetystep5_5"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep5_6" placeholder="Sub-Step 6" rows="1" oninput="this.className = ''" name="substep5_6"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety5_6" placeholder="Safety 6" rows="1" oninput="this.className = ''" name="safetystep5_6"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep5_7" placeholder="Sub-Step 7" rows="1" oninput="this.className = ''" name="substep5_7"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety5_7" placeholder="Safety 7" rows="1" oninput="this.className = ''" name="substep5_7"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep5_8" placeholder="Sub-Step 8" rows="1" oninput="this.className = ''" name="substep5_8"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety5_8" placeholder="Safety 8" rows="1" oninput="this.className = ''" name="substep5_8"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep5_9" placeholder="Sub-Step 9" rows="1" oninput="this.className = ''" name="substep5_9"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety5_9" placeholder="Safety 9" rows="1" oninput="this.className = ''" name="substep5_9"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep5_10" placeholder="Sub-Step 10" rows="1" oninput="this.className = ''" name="substep5_10"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety5_10" placeholder="Safety 10" rows="1" oninput="this.className = ''" name="substep5_10"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <!-- Process Step 6 -->
+            <div class='tab'>
+                <label for="inputStep6" class="col-auto col-form-label">Process Step 6</label>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputStep6" placeholder="Step" oninput="this.className = ''" name="step6">
+                </div>
+                <br>
+                <p>Below is the sub-steps for the process step, and the safety that is required.</p>   
+            
+                <!-- Table Creation -->
+                <table class="table table-bordered table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Step</th>
+                    <th scope="col">Safety</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep6_1" placeholder="Sub-Step 1" rows="1" oninput="this.className = ''" name="substep6_1"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety6_1" placeholder="Safety 1" rows="1" oninput="this.className = ''" name="safetystep6_1"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep6_2" placeholder="Sub-Step 2" rows="1" oninput="this.className = ''" name="substep6_2"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety6_2" placeholder="Safety 2" rows="1" oninput="this.className = ''" name="safetystep6_2"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep6_3" placeholder="Sub-Step 3" rows="1" oninput="this.className = ''" name="substep6_3"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety6_3" placeholder="Safety 3" rows="1" oninput="this.className = ''" name="safetystep6_3"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep6_4" placeholder="Sub-Step 4" rows="1" oninput="this.className = ''" name="substep6_4"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety6_4" placeholder="Safety 4" rows="1" oninput="this.className = ''" name="safetystep6_4"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep6_5" placeholder="Sub-Step 5" rows="1" oninput="this.className = ''" name="substep6_5"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety6_5" placeholder="Safety 5" rows="1" oninput="this.className = ''" name="safetystep6_5"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep6_6" placeholder="Sub-Step 6" rows="1" oninput="this.className = ''" name="substep6_6"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety6_6" placeholder="Safety 6" rows="1" oninput="this.className = ''" name="safetystep6_6"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep6_7" placeholder="Sub-Step 7" rows="1" oninput="this.className = ''" name="substep6_7"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety6_7" placeholder="Safety 7" rows="1" oninput="this.className = ''" name="substep6_7"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep6_8" placeholder="Sub-Step 8" rows="1" oninput="this.className = ''" name="substep6_8"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety6_8" placeholder="Safety 8" rows="1" oninput="this.className = ''" name="substep6_8"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep6_9" placeholder="Sub-Step 9" rows="1" oninput="this.className = ''" name="substep6_9"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety6_9" placeholder="Safety 9" rows="1" oninput="this.className = ''" name="substep6_9"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep6_10" placeholder="Sub-Step 10" rows="1" oninput="this.className = ''" name="substep6_10"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety6_10" placeholder="Safety 10" rows="1" oninput="this.className = ''" name="substep6_10"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+            
+            <!-- Process Step 7 -->
+            <div class='tab'>
+                <label for="inputStep7" class="col-auto col-form-label">Process Step 7</label>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputStep7" placeholder="Step" oninput="this.className = ''" name="step7">
+                </div>
+                <br>
+                <p>Below is the sub-steps for the process step, and the safety that is required.</p>   
+            
+                <!-- Table Creation -->
+                <table class="table table-bordered table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Step</th>
+                    <th scope="col">Safety</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep7_1" placeholder="Sub-Step 1" rows="1" oninput="this.className = ''" name="substep7_1"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety7_1" placeholder="Safety 1" rows="1" oninput="this.className = ''" name="safetystep7_1"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep7_2" placeholder="Sub-Step 2" rows="1" oninput="this.className = ''" name="substep7_2"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety7_2" placeholder="Safety 2" rows="1" oninput="this.className = ''" name="safetystep7_2"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep7_3" placeholder="Sub-Step 3" rows="1" oninput="this.className = ''" name="substep7_3"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety7_3" placeholder="Safety 3" rows="1" oninput="this.className = ''" name="safetystep7_3"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep7_4" placeholder="Sub-Step 4" rows="1" oninput="this.className = ''" name="substep7_4"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety7_4" placeholder="Safety 4" rows="1" oninput="this.className = ''" name="safetystep7_4"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep7_5" placeholder="Sub-Step 5" rows="1" oninput="this.className = ''" name="substep7_5"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety7_5" placeholder="Safety 5" rows="1" oninput="this.className = ''" name="safetystep7_5"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep7_6" placeholder="Sub-Step 6" rows="1" oninput="this.className = ''" name="substep7_6"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety7_6" placeholder="Safety 6" rows="1" oninput="this.className = ''" name="safetystep7_6"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep7_7" placeholder="Sub-Step 7" rows="1" oninput="this.className = ''" name="substep7_7"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety7_7" placeholder="Safety 7" rows="1" oninput="this.className = ''" name="substep7_7"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep7_8" placeholder="Sub-Step 8" rows="1" oninput="this.className = ''" name="substep7_8"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety7_8" placeholder="Safety 8" rows="1" oninput="this.className = ''" name="substep7_8"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep7_9" placeholder="Sub-Step 9" rows="1" oninput="this.className = ''" name="substep7_9"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety7_9" placeholder="Safety 9" rows="1" oninput="this.className = ''" name="substep7_9"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep7_10" placeholder="Sub-Step 10" rows="1" oninput="this.className = ''" name="substep7_10"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety7_10" placeholder="Safety 10" rows="1" oninput="this.className = ''" name="substep7_10"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+            
+            <!-- Process Step 8 -->
+            <div class='tab'>
+                <label for="inputStep8" class="col-auto col-form-label">Process Step 8</label>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputStep8" placeholder="Step" oninput="this.className = ''" name="step8">
+                </div>
+                <br>
+                <p>Below is the sub-steps for the process step, and the safety that is required.</p>   
+            
+                <!-- Table Creation -->
+                <table class="table table-bordered table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Step</th>
+                    <th scope="col">Safety</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep8_1" placeholder="Sub-Step 1" rows="1" oninput="this.className = ''" name="substep8_1"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety8_1" placeholder="Safety 1" rows="1" oninput="this.className = ''" name="safetystep8_1"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep8_2" placeholder="Sub-Step 2" rows="1" oninput="this.className = ''" name="substep8_2"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety8_2" placeholder="Safety 2" rows="1" oninput="this.className = ''" name="safetystep8_2"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep8_3" placeholder="Sub-Step 3" rows="1" oninput="this.className = ''" name="substep8_3"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety8_3" placeholder="Safety 3" rows="1" oninput="this.className = ''" name="safetystep8_3"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep8_4" placeholder="Sub-Step 4" rows="1" oninput="this.className = ''" name="substep8_4"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety8_4" placeholder="Safety 4" rows="1" oninput="this.className = ''" name="safetystep8_4"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep8_5" placeholder="Sub-Step 5" rows="1" oninput="this.className = ''" name="substep8_5"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety8_5" placeholder="Safety 5" rows="1" oninput="this.className = ''" name="safetystep8_5"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep8_6" placeholder="Sub-Step 6" rows="1" oninput="this.className = ''" name="substep8_6"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety8_6" placeholder="Safety 6" rows="1" oninput="this.className = ''" name="safetystep8_6"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep8_7" placeholder="Sub-Step 7" rows="1" oninput="this.className = ''" name="substep8_7"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety8_7" placeholder="Safety 7" rows="1" oninput="this.className = ''" name="substep8_7"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep8_8" placeholder="Sub-Step 8" rows="1" oninput="this.className = ''" name="substep8_8"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety8_8" placeholder="Safety 8" rows="1" oninput="this.className = ''" name="substep8_8"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep8_9" placeholder="Sub-Step 9" rows="1" oninput="this.className = ''" name="substep8_9"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety8_9" placeholder="Safety 9" rows="1" oninput="this.className = ''" name="substep8_9"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep8_10" placeholder="Sub-Step 10" rows="1" oninput="this.className = ''" name="substep8_10"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety8_10" placeholder="Safety 10" rows="1" oninput="this.className = ''" name="substep8_10"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <!-- Process Step 9 -->
+            <div class='tab'>
+                <label for="inputStep9" class="col-auto col-form-label">Process Step 9</label>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputStep9" placeholder="Step" oninput="this.className = ''" name="step9">
+                </div>
+                <br>
+                <p>Below is the sub-steps for the process step, and the safety that is required.</p>   
+            
+                <!-- Table Creation -->
+                <table class="table table-bordered table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Step</th>
+                    <th scope="col">Safety</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep9_1" placeholder="Sub-Step 1" rows="1" oninput="this.className = ''" name="substep9_1"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety9_1" placeholder="Safety 1" rows="1" oninput="this.className = ''" name="safetystep9_1"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep9_2" placeholder="Sub-Step 2" rows="1" oninput="this.className = ''" name="substep9_2"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety9_2" placeholder="Safety 2" rows="1" oninput="this.className = ''" name="safetystep9_2"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep9_3" placeholder="Sub-Step 3" rows="1" oninput="this.className = ''" name="substep9_3"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety9_3" placeholder="Safety 3" rows="1" oninput="this.className = ''" name="safetystep9_3"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep9_4" placeholder="Sub-Step 4" rows="1" oninput="this.className = ''" name="substep9_4"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety9_4" placeholder="Safety 4" rows="1" oninput="this.className = ''" name="safetystep9_4"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep9_5" placeholder="Sub-Step 5" rows="1" oninput="this.className = ''" name="substep9_5"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety9_5" placeholder="Safety 5" rows="1" oninput="this.className = ''" name="safetystep9_5"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep9_6" placeholder="Sub-Step 6" rows="1" oninput="this.className = ''" name="substep9_6"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety9_6" placeholder="Safety 6" rows="1" oninput="this.className = ''" name="safetystep9_6"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep9_7" placeholder="Sub-Step 7" rows="1" oninput="this.className = ''" name="substep9_7"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety9_7" placeholder="Safety 7" rows="1" oninput="this.className = ''" name="substep9_7"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep9_8" placeholder="Sub-Step 8" rows="1" oninput="this.className = ''" name="substep9_8"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety9_8" placeholder="Safety 8" rows="1" oninput="this.className = ''" name="substep9_8"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep9_9" placeholder="Sub-Step 9" rows="1" oninput="this.className = ''" name="substep9_9"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety9_9" placeholder="Safety 9" rows="1" oninput="this.className = ''" name="substep9_9"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep9_10" placeholder="Sub-Step 10" rows="1" oninput="this.className = ''" name="substep9_10"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety9_10" placeholder="Safety 10" rows="1" oninput="this.className = ''" name="substep9_10"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <!-- Process Step 10 -->
+            <div class='tab'>
+                <label for="inputStep10" class="col-auto col-form-label">Process Step 10</label>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputStep10" placeholder="Step" oninput="this.className = ''" name="step10">
+                </div>
+                <br>
+                <p>Below is the sub-steps for the process step, and the safety that is required.</p>   
+            
+                <!-- Table Creation -->
+                <table class="table table-bordered table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Step</th>
+                    <th scope="col">Safety</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep10_1" placeholder="Sub-Step 1" rows="1" oninput="this.className = ''" name="substep10_1"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety10_1" placeholder="Safety 1" rows="1" oninput="this.className = ''" name="safetystep10_1"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep10_2" placeholder="Sub-Step 2" rows="1" oninput="this.className = ''" name="substep10_2"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety10_2" placeholder="Safety 2" rows="1" oninput="this.className = ''" name="safetystep10_2"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep10_3" placeholder="Sub-Step 3" rows="1" oninput="this.className = ''" name="substep10_3"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety10_3" placeholder="Safety 3" rows="1" oninput="this.className = ''" name="safetystep10_3"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep10_4" placeholder="Sub-Step 4" rows="1" oninput="this.className = ''" name="substep10_4"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety10_4" placeholder="Safety 4" rows="1" oninput="this.className = ''" name="safetystep10_4"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep10_5" placeholder="Sub-Step 5" rows="1" oninput="this.className = ''" name="substep10_5"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety10_5" placeholder="Safety 5" rows="1" oninput="this.className = ''" name="safetystep10_5"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep10_6" placeholder="Sub-Step 6" rows="1" oninput="this.className = ''" name="substep10_6"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety10_6" placeholder="Safety 6" rows="1" oninput="this.className = ''" name="safetystep10_6"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep10_7" placeholder="Sub-Step 7" rows="1" oninput="this.className = ''" name="substep10_7"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety10_7" placeholder="Safety 7" rows="1" oninput="this.className = ''" name="substep10_7"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep10_8" placeholder="Sub-Step 8" rows="1" oninput="this.className = ''" name="substep10_8"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety10_8" placeholder="Safety 8" rows="1" oninput="this.className = ''" name="substep10_8"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep10_9" placeholder="Sub-Step 9" rows="1" oninput="this.className = ''" name="substep10_9"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety10_9" placeholder="Safety 9" rows="1" oninput="this.className = ''" name="substep10_9"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubStep10_10" placeholder="Sub-Step 10" rows="1" oninput="this.className = ''" name="substep10_10"></textarea>
+                    </div>
+                    </td>
+                    <td>
+                    <div class="col-auto">
+                        <textarea class="form-control" id="inputSubSafety10_10" placeholder="Safety 10" rows="1" oninput="this.className = ''" name="substep10_10"></textarea>
+                    </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <!-- Next, Previous Buttons -->
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                </div>
+            </div>
+            <!-- Process Progress Circles at bottom of page -->
+            <!-- 10 for each step, +1 for iterative purposes-->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+        </form>
+        </div>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="../dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/app_SOP_form.js"></script>
+        <!-- <script src="../static/js/data_collection.js"></script> -->
+    </body>   
+</html>

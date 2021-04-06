@@ -1,0 +1,127 @@
+html{
+    background-color:whitesmoke;
+    }
+
+body{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: whitesmoke;
+    }
+
+.container{
+    padding-top: 3rem;
+    }
+
+.title-container{
+    left:10px
+    }
+
+.nav{
+    background-color: black;
+    }
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    }
+
+.row {
+    margin-bottom: 1rem;
+    }
+.row .row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    }
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    }
+
+.lh-condensed { 
+    line-height: 1.25; 
+    }
+  
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #aaaaaa;
+    }
+
+input[type=text], select, textarea{
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #aaaaaa;
+    /* border-radius: 4px;
+    box-sizing: border-box; */
+    resize: vertical;
+    }
+.form-check-input{
+    right: auto;
+}
+    /* Mark input boxes that gets an error on validation: */
+input.invalid {
+    background-color: #ffdddd;
+    }
+
+    /* Hide all steps by default: */
+.tab {
+    display: none;
+    }
+
+button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    }
+
+button:hover {
+    opacity: 0.8;
+    }
+
+#prevBtn {
+    background-color: #bbbbbb;
+    }
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+    }
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+    }
+
+.step.active {
+    opacity: 1;
+    }
+
+    /* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: #4CAF50;
+    }
